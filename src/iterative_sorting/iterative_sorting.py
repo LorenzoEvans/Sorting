@@ -4,6 +4,8 @@ def selection_sort( arr ):
     for i in range(0, len(arr) - 1):
         cur_index = i
         smallest_index = cur_index
+
+        while smallest_index > cur_index:
         # TO-DO: find next smallest element
         # (hint, can do in 3 loc) 
              
