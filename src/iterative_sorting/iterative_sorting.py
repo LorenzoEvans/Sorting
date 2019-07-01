@@ -1,4 +1,11 @@
 # TO-DO: Complete the selection_sort() function below 
+
+def insertion_sort(arr):
+    for i in range(1, len(arr)):
+        cur_val = arr[i]
+
+
+
 def selection_sort( arr ):
     # loop through n-1 elements
     for i in range(0, len(arr) - 1):
@@ -10,7 +17,7 @@ def selection_sort( arr ):
         while smallest_index > cur_index:
 
 
-            # TO-DO: find next smallest element
+        # TO-DO: find next smallest element
         # (hint, can do in 3 loc) 
              
 
