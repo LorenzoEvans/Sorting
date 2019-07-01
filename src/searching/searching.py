@@ -4,13 +4,21 @@ def linear_search(arr, target):
   # TO-DO: add missing code
   i = 0
 
-  while i < len(arr) - 1:
+  while i < len(arr):
     if arr[i] == target:
-      return arr[i]
-    else: i += 1
+      return i
+    i += 1
+  return - 1
+  # for i in arr:
+  #   print(i)
+  #   if arr[i] is target:
+  #     return arr[i]
+  #   else:
+  #       return -1
 
-  return -1   # not found
+randarr = [1, 2, 3, 4, 5 ]
 
+print(linear_search(randarr, 3))
 
 # STRETCH: write an iterative implementation of Binary Search 
 def binary_search(arr, target):
