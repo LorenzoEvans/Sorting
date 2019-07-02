@@ -1,8 +1,9 @@
 # TO-DO: Complete the selection_sort() function below 
 
 def insertion_sort(arr):
-    for i in range(1, len(arr)):
+    for i in range(0, len(arr)):
         cur_val = arr[i]
+        print(cur_val)
         index = i
         print("Outer index:", index)
         while index > 0 and arr[index - 1] > cur_val:
