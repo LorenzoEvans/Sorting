@@ -51,9 +51,7 @@ def insertion_sort(arr):
 
 print(insertion_sort(rand_arr))
 
-# for i in range(0, len(rand_arr)):
-# 	print(i)
-
+git commit --date="11 days ago" -m "getting reps"
 # def selection_sort( arr ):
 #     # loop through n-1 elements
 #     for i in range(0, len(arr) - 1):
