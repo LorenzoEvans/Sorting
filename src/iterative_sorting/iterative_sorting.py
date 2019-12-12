@@ -1,17 +1,29 @@
 # TO-DO: Complete the selection_sort() function below 
 
+# def insertion_sort(arr):
+#     for i in range(0, len(arr)):
+#         cur_val = arr[i]
+#         print(cur_val)
+#         index = i
+#         print("Outer index:", index)
+#         while index > 0 and arr[index - 1] > cur_val:
+#             arr[index] = arr[index - 1]
+#             index -= 1
+#             print("Inner index:", index)
+#         arr[index] = cur_val
+#     return arr
+
+#  Conceptually, we split a collection into sorted and unsorted parts.
+#  One part is the first element, and a single element list is always sorted.
 def insertion_sort(arr):
-    for i in range(0, len(arr)):
-        cur_val = arr[i]
-        print(cur_val)
-        index = i
-        print("Outer index:", index)
-        while index > 0 and arr[index - 1] > cur_val:
-            arr[index] = arr[index - 1]
+    for i in range(0, len(arr)):  # Every number between 0 and length of data set
+        cur_val = arr[i]  # Capture array element selected on current iteration of for loop
+        print(cur_val)  # Printing for check
+        index = i  # Set index to number indication which iteration is currently taking place
+        while index > 0 and arr[index - 1] > cur_val:  # While index > 0 & the element of the arr at the index equaling index - 1 is greater than the current element
+            arr[index] = arr[index - 1]  # set the current element to the value before it, because the current element is less than the previous one.
             index -= 1
-            print("Inner index:", index)
         arr[index] = cur_val
-    return arr
 
 
 rand_arr = [1, 4, 6, 12, 5, 2]
