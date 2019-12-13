@@ -15,6 +15,10 @@
 
 #  Conceptually, we split a collection into sorted and unsorted parts.
 #  One part is the first element, and a single element list is always sorted.
+#  For every index in the collection, we compare the value at index i,
+#  with everything to the left of it, to figure out it's place in the sorted
+#  sub-collection.
+
 def insertion_sort(arr):
     for i in range(0, len(arr)):  # Every number between 0 and length of data set
         cur_val = arr[i]  # Capture array element selected on current iteration of for loop
@@ -65,27 +69,28 @@ def insertion_sort(arr):
 #     # loop through n-1 elements
 #     for i in range(0, len(arr) - 1):
 #         cur_index = 0
-#         # first element of arr
+#         # cur_val = arr[i]
 #
 #         smallest_index = cur_index
 #
 #         while smallest_index > cur_index:
 #
 #
-#         # TO-DO: find next smallest element
+#         # TO-DO: find next smallest element :: arr[i + 1]
+
 #         # (hint, can do in 3 loc)
 #
 #
 #
 #
-#         # TO-DO: swap
+#         # TO-DO: swap :: cur_val
 #
 #
 #
 #
 #     return arr
 #
-#
+
 # # TO-DO:  implement the Bubble Sort function below
 # def bubble_sort( arr ):
 #
@@ -96,3 +101,4 @@ def insertion_sort(arr):
 # def count_sort( arr, maximum=-1 ):
 #
 #     return arr
+
