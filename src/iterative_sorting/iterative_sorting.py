@@ -29,19 +29,22 @@ def insertion_sort(arr):
         arr[index] = cur_val
 
 
-rand_arr = [1, 4, 6, 12, 5, 2]
+rand_arr = [1, 4, 6, 3, 5, 2]
 
 def insertion_sort(arr):
     for i in range(0, len(arr)):
-        cur_val = arr[i] # arr[i => (0)] => 1 # arr[i => (1)] => 4
-        index = i # index => 0 # index => 1
+        cur_val = arr[i] # arr[i => (0)] => 1 # arr[i => (1)] => 4 # arr[2] => 6 # 3
+        index = i # index => 0 # index => 1 # index => 2 # 3
         while index > 0 and arr[index - 1] > cur_val:
 	    # while 0 > 0 and arr[index (0) - 1 => -1 => (2)] 2 > 1
 	    # while 1 > 0 and arr[index (1) - 1 => 0] => 1 > 4
+	    # while 2 > 0 and arr[index (2) - 1 => 1] => 4 > 6
+	    # while 3 > 0 and arr[index (3) - 1 => 2] => 6 > 3
 	    # bc both false, 1 and two are *not* swapped.
 	    # bc one false, nothing swapped, index not decremented
-            arr[index] = arr[index - 1]
-            index -= 1
+	    # bc both true, arr[3 => (3)] = arr[index => 3 - 1 => 2] => 6.
+            arr[index] = arr[index - 1] # 3 & 6 are swapped
+            index -= 1 # 3 - 2, we'll have 6 & 5, and swap again.
         print(arr[index - 1])
         arr[index] = cur_val
 
