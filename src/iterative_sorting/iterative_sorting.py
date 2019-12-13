@@ -47,11 +47,20 @@ def insertion_sort(arr):
             index -= 1 # 3 - 2, we'll have 6 & 5, and swap again.
         print(arr[index - 1])
         arr[index] = cur_val
+# An insertion sort requires a numerical range, from 0 to the length of the data set.
+# This is easily done in the declaration of a loop.
+# Next, it is customary to store an element of the data set in a variable, typically
+# corresponding to the current stage of the iterative loop, which depends on the aforementioned numerical range.
+# Also, it is customary to store the numerical representation of said stage within a variable as well.
+# We then have a boolean condition, which checks if the current index is greater than 0, and if the stored element is less than the
+# element located at the address represented by index - 1, and if both of these are true, then currently within our data set,
+# we have a larger element, preceding a smaller element, which means we need to change these places, and decrement the index
+# to start from the prior to last step, and continue searching.
+# This algorithm is inefficient because while swapping these two values based on that criteria may be correct, relative to *each other*,
+# it does not guarantee that this sorting is correct in the context of the *greater data set* the two values exist in, which leads to
+# multiple passes to make sure every element is in the right order according to every other element, as opposed to just a given pair of elements.
 
 
-print(insertion_sort(rand_arr))
-
-git commit --date="11 days ago" -m "getting reps"
 # def selection_sort( arr ):
 #     # loop through n-1 elements
 #     for i in range(0, len(arr) - 1):
