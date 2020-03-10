@@ -6,6 +6,7 @@ def insertion_sort(arr):
       # We generate a list of integers for every element in the array
         cur_val = arr[i]
       # We select the first value in the array
+      # This establishes a helpful baseline for orderliness, as a single element list is already perfectly ordered.
         index = i
       # We track out index placement with a variable i
 
@@ -16,8 +17,10 @@ def insertion_sort(arr):
               # We want to replace whatever element is at our current index, with the one before it
             index -= 1
               # Then, we then subtract one from the index (why?)
-                # Because we want to re-start the sort through the rest on the list, starting with the changed element,
-                # in order to make sure we touch every item as we iterate.
+              # Because we want to re-start the sort through the rest on the list, starting with the changed element,
+              # in order to make sure we touch every item as we iterate.
+              # This is "iterating to the left", by decreasing the index of the sorted array
+              # to target indexes in the sorted "single" element array.
 
         arr[index] = cur_val
         # If index is not greater than zero, OR the element located at our current array index is not greater than our current value,
